@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodiePhile</title>
+  <link rel="stylesheet" href="/css/menu.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">FoodiePhile</div>
+    <nav class="nav">
+      <a href="/index">Home</a>
+      <a href="/menu.html" class="active">Menu</a>
+      <a href="/signup.html" id="authLink">Login/Signup</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search food items...">
+      <button>Search</button>
+    </div>
+
+    <div class="categories">
+        <button id="foodItems" data-category="food-items">Food Items</button>
+        <button id="drinks" data-category="drinks">Drinks</button>
+    </div>
+
+    <div id="menuItems" class="menu-items">
+      <div class="food-item" data-category="food-items">
+        <img src="/images/food-items/pizza.jpg" alt="Pizza">
+        <h3 class="item-name">Pizza</h3>
+        <p>Cheesy and delicious pizza topped with fresh ingredients.</p>
+        <p><strong>Price:</strong> ₹<span class="item-price">457</span>/-</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="food-item" data-category="drinks">
+        <img src="/images/food-items/mocktail.jpeg" alt="Mocktail">
+        <h3 class="item-name">Mocktail</h3>
+        <p>Refreshing and fruity mocktail.</p>
+        <p><strong>Price:</strong> ₹<span class="item-price">99</span>/-</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="food-item" data-category="food-items">
+        <img src="/images/food-items/burger.jpg" alt="Burger">
+        <h3 class="item-name">Burger</h3>
+        <p>Crispy and stacked burger</p>
+        <p><strong>Price:</strong> ₹<span class="item-price">80</span>/-</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="food-item" data-category="food-items">
+        <img src="/images/food-items/pasta.jpg" alt="Pasta">
+        <h3 class="item-name">Pasta</h3>
+        <p>Cheesy pasta with tomatoes.</p>
+        <p><strong>Price:</strong> ₹<span class="item-price">270</span>/-</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="food-item" data-category="drinks">
+        <img src="/images/food-items/coke.jpeg" alt="Coke">
+        <h3 class="item-name">Coke</h3>
+        <p>Your coke with extra strong punch.</p>
+        <p><strong>Price:</strong> ₹<span class="item-price">55</span>/-</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="food-item" data-category="drinks">
+        <img src="/images/food-items/lemon.jpeg" alt="Lemon Juice">
+        <h3 class="item-name">Lemon Juice</h3>
+        <p>Mood refreshing lemon juice.</p>
+        <p><strong>Price:</strong> ₹<span class="item-price">40</span>/-</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>FoodiePhile Group Of Cloud Kitchens</p>
+      <p>Email: ourRestaurant@gmail.com | Phone: 1010101010</p>
+      <p>Open Hours:11 AM to 12PM</p>
+      <p>Order Anytime...Anywhere</p>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodiePhile</title>
+  <link rel="stylesheet" href="/css/signup.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">FoodiePhile</div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/menu.html">Menu</a>
+      <a href="/signup.html" class="active" id="authLink">Login/Signup</a>
+    </nav>
+  </header>
+
+  <main class="auth-container">
+    <div class="form-wrapper">
+      <div class="tabs">
+        <button id="loginTab" class="tab active">Login</button>
+        <button id="signupTab" class="tab">Sign Up</button>
+      </div>
+
+      <form id="loginForm" class="auth-form active">
+        <h2>User Login</h2>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+        <div id="linkContainer">
+          <a href="#" id="forgotPassword">Forgot Password?</a>
+          <a href="#" id="loginAdmin">Login as Admin</a>
+        </div>
+      </form>
+
+      <form id="signupForm" class="auth-form">
+        <h2>Sign Up</h2>
+        <label for="signupUsername">Username</label>
+        <input type="text" id="signupUsername" placeholder="Enter your username" required>
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" placeholder="Enter your password" required>
+        <label for="signupMobile">Mobile Number</label>
+        <input type="tel" id="signupMobile" placeholder="Enter your mobile number" required>
+        <button type="submit">Sign Up</button><br>
+        <div id="linkContainer">
+          <a href="#" id="signupAdmin">New Restaurant?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>FoodiePhile Group Of Cloud Kitchens</p>
+      <p>Email: ourRestaurant@gmail.com | Phone: 1010101010</p>
+      <p>Open Hours:11 AM to 12PM</p>
+      <p>Order Anytime...Anywhere</p>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/signup.js"></script>
+</body>
+</html>
