@@ -23,6 +23,24 @@
       <h1 style="text-align: center; color: #ff5722;">Cart</h1>
       <div id="cartContainer">
         <p id="emptyCartMessage" style="display: none; text-align: center; font-size: 18px; color: #888;">Your cart is empty.</p>
+        <div id="cartHeadings" style="display: none; text-align: left; font-weight: bold; padding: 10px 0; border-bottom: 2px solid #ccc;">
+          <span style="width: 40%; display: inline-block;">Item Name</span>
+          <span style="width: 32%; display: inline-block;">Quantity</span>
+          <span style="width: 13%; display: inline-block;">Price</span>
+          <span style="width: 15%; display: inline-block;"></span>
+        </div>
+        
+        <ul id="cartList"></ul>
+        
+        <div id="cartSummary" style="display: none;">
+          <p class="cart-total">
+            <strong>Total Price:</strong> ₹<span id="totalPrice">0</span>
+          </p>
+          <div class="cart-buttons">
+            <button id="addMoreItemsBtn">Add More Items</button>
+            <button id="orderSummaryBtn">Order Summary</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>

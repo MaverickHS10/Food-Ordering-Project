@@ -116,6 +116,133 @@ body, html {
   color: #ff8c42;
 }
 
+.main {
+  flex: 1; 
+  min-height: 70vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: #9b9a9a;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  margin-top: 48px; 
+}
+
+#cartContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#emptyCartMessage {
+  text-align: center;
+  color: #6c757d;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+#cartList {
+  list-style: none;
+  padding: 0;
+}
+
+#cartList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+#cartList li span {
+  flex: 1;
+  text-align: center; 
+}
+
+#cartList li span:first-child {
+  text-align: left; 
+}
+
+#cartList li span:last-child {
+  text-align: right; 
+}
+
+#cartList li:last-child {
+  border-bottom: none;
+}
+
+.quantity-btn {
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.quantity-btn:hover {
+  background-color: #495057;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background-color: #bd2130;
+}
+
+#totalPrice {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 18px;
+}
+
+.cart-total {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #212529;
+}
+
+.cart-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart-buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.cart-buttons button:hover {
+  background-color: #0056b3;
+}
+
+#addMoreItemsBtn {
+  background-color: #007a06;
+}
+
+#addMoreItemsBtn:hover {
+  background-color: #00f549;
+}
+
 @media (max-width: 600px) {
   #cartList li span,
   #orderSummaryList li span {
