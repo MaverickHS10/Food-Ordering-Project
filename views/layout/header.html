@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodiePhile</title>
+  <!-- Link to the Navbar CSS -->
+  <link rel="stylesheet" href="C:\Users\dhana\Documents\Food-Ordering-WebApp\views\layout\header.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <div class="logo">FoodiePhile</div>
+    <nav class="nav">
+      <a href="/index">Home</a>
+      <a href="/menu.html" class="active">Menu</a>
+      <a href="/signup.html" id="authLink">Login/Signup</a>
+      <a href="/cart.html" class="cart-icon">🛒</a>
+    </nav>
+  </header>
+
+  <!-- Profile Modal -->
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <button id="closeProfileModal" class="close-btn">&times;</button>
+      <h2>Profile Details</h2>
+      <div class="profile-details">
+        <p><strong>Username:</strong> <span id="modalUsername">${user.username}</span></p>
+        <p><strong>Email:</strong> <span id="modalEmail">${user.email}</span></p>
+        <p><strong>Phone:</strong> <span id="modalPhone">${user.phone || "N/A"}</span></p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <!-- Include JavaScript -->
+  <script src="header.js"></script>
+</body>
+</html>

@@ -1,25 +1,28 @@
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
+
+  /* Use flexbox for the overall layout */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh; /* Ensure the body fills the full height of the viewport */
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: orange;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
-  color: rgb(248, 113, 3);
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
-
 .header .logo {
   font-size: 1.5rem;
   padding: 10px 14px;
@@ -27,22 +30,20 @@ body, html {
 }
 
 .nav a {
-  color: rgb(248, 113, 3);
-  font-size: 20px;
+  color: orange;
   text-decoration: none;
-  padding:  10px 14px;
-}
-
-.nav a:hover {
-  background-color: white;
-}
-
-.nav a.active {
+  padding: 0.5rem 1rem;
   font-weight: bold;
   font-size: 20px;
-  background-color: #bd2130;
 }
 
+.nav a:hover,
+.nav .active {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Cart Icon */
 .cart-icon {
   font-size: 20px;
   text-decoration: none;
@@ -66,71 +67,153 @@ body, html {
   text-decoration: none;
 }
 
-.main {
-  flex: 1; 
-  min-height: 70vh;
-  max-width: 800px;
-  margin: 0 auto; 
-  padding: 10px 20px;
-  background: #9b9a9a;
+/* Profile Popup Styles */
+#profilePopup {
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  right: 0px;
+  width: 300px;
+  max-height: 90%; /* Allow scrolling if content exceeds 90% of the viewport */
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide anything that goes outside */
+  z-index: 1000;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  margin-top: 48px; 
 }
 
-#cartContainer {
+/* Header Section (Profile Picture and User Info) */
+.popup-content {
+  padding: 20px;
   text-align: center;
-  margin-top: 20px;
+  border-bottom: 1px solid #eee;
 }
 
-#emptyCartMessage {
-  text-align: center;
-  color: #6c757d;
+.popup-content img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f4f4f4; /* Placeholder color for profile pic */
+}
+
+.popup-content h3 {
+  margin: 10px 0 5px;
+}
+
+.popup-content p {
+  margin: 0;
+  color: #555;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
   font-size: 18px;
-  margin: 20px 0;
+  cursor: pointer;
 }
 
-.footer {
-  background-color: #333;
+.btn {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  background: #007bff;
   color: white;
-  padding: 20px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   text-align: center;
-  margin-top: auto;
 }
 
-.footer p {
-  margin: 5px 0;
-  font-size: 14px;
+.btn:hover {
+  background: #0056b3;
 }
 
-.social-icons a {
-  color: #ff5722;
-  text-decoration: none;
-  margin: 0 10px;
+/* Address Section */
+#addressSection {
+  flex: 1; /* Make this section grow to fill available space */
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling if addresses overflow */
 }
 
-.social-icons a:hover {
-  color: #ff8c42;
+/* Address Input Field */
+#newAddressInput {
+  display: none; /* Hidden initially */
+  margin: 10px 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+/* Address List */
+#addressList {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#addressList li {
+  padding: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.remove-address-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.remove-address-btn:hover {
+  color: darkred;
+}
+
+/* Logout Button */
+.logout-btn {
+  position: sticky; /* Fix the button at the bottom of the popup */
+  bottom: 0;
+  width: 100%;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Main Content */
 .main {
-  flex: 1; 
+  flex: 1; /* Ensures main content grows to fill the available vertical space */
   min-height: 70vh;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers the content horizontally */
   padding: 10px 20px;
   background: #9b9a9a;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Add flexbox to center content when it is small */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  margin-top: 48px; 
+  justify-content: flex-start; /* Content starts at the top */
+  margin-top: 48px; /* Offset for the fixed header height */
 }
 
+/* Cart-Specific Styles */
 #cartContainer {
   text-align: center;
   margin-top: 20px;
@@ -158,15 +241,15 @@ body, html {
 
 #cartList li span {
   flex: 1;
-  text-align: center; 
+  text-align: center; /* Center-align all spans */
 }
 
 #cartList li span:first-child {
-  text-align: left; 
+  text-align: left; /* Align the first column to the left */
 }
 
 #cartList li span:last-child {
-  text-align: right; 
+  text-align: right; /* Align the last column to the right */
 }
 
 #cartList li:last-child {
@@ -207,6 +290,7 @@ body, html {
   font-size: 18px;
 }
 
+/* Total Price Section */
 .cart-total {
   text-align: center;
   font-size: 20px;
@@ -215,6 +299,21 @@ body, html {
   color: #212529;
 }
 
+/* Address Dropdown */
+#addressDropdown {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #bbb7b7;
+  color: #333;
+}
+
+
+
+/* Buttons Section */
 .cart-buttons {
   margin-top: 20px;
   text-align: center;
@@ -243,6 +342,112 @@ body, html {
   background-color: #00f549;
 }
 
+/* Modal for Order Summary */
+#orderSummaryModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  background: #9b9a9a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 25000;
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close-btn:hover {
+  background: #bd2130;
+}
+
+#orderSummaryList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#orderSummaryList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+#orderSummaryList li span {
+  flex: 1;
+  text-align: center; /* Center-align all spans */
+}
+
+#orderSummaryList li span:first-child {
+  text-align: left; /* Align the first column to the left */
+}
+
+#orderSummaryList li span:last-child {
+  text-align: right; /* Align the last column to the right */
+}
+
+#proceedToPaymentBtn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block; /* Ensures the button behaves as a block-level element */
+  margin: 0 auto; /* Centers the button horizontally */
+  text-align: center; /* Ensures the button's text is aligned properly */
+}
+
+
+#proceedToPaymentBtn:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.social-icons a {
+  color: #ff5722;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  color: #ff8c42;
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 600px) {
   #cartList li span,
   #orderSummaryList li span {

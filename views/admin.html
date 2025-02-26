@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodiePhile Admin</title>
+  <link rel="stylesheet" href="/css/admin.css"> 
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="header" id="adminNavbar">
+    <div class="logo">FoodiePhile Admin</div>
+    <nav class="nav">
+      <a href="/menu.html">Menu</a>
+      <a href="/admin.html" class="active">Update Menu</a>
+      <a href="/orders.html">Orders</a>
+      <a href="#" id="profileBtn" class="profile-icon" title="Profile"><i class="far fa-user-circle"></i></a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="admin-container">
+    <!-- Left: Add Item Form -->
+    <div class="add-item-section">
+      <form class="add-item-form">
+        <h2>Add New Item</h2>
+        <div class="form-content">
+          <div class="imageUpload">
+            <label for="itemImage">
+              <img id="imagePreview" src="/images/uploadPic.jpg" alt="Upload Image">
+            </label>
+            <input type="file" id="itemImage" accept="image/*">
+          </div>
+
+          <div class="itemDetails">
+            <label for="item-name">Name</label>
+            <input type="text" id="item-name" placeholder="Enter item name" required>
+
+            <label for="item-description">Description</label>
+            <textarea id="item-description" rows="4" placeholder="Enter item description" required></textarea>
+
+            <label for="item-price">Price</label>
+            <input type="number" id="item-price" placeholder="Enter item price" required>
+
+            <label for="item-category">Category</label>
+            <select id="item-category" required>
+              <option value="">Select Category</option>
+              <option value="Starter">Snacks</option>
+              <option value="Main Course">Main Course</option>
+              <option value="Beverage">Drinks</option>
+              <option value="Dessert">Dessert</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit">Add Item</button>
+      </form>
+    </div>
+
+    <!-- Right: Menu Items List -->
+    <div class="menu-items-section">
+      <h2>All Menu Items</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sr. No</th>
+            <th>Name</th>
+            <th>Update</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="menu-list">
+          <!-- Menu items will be inserted dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

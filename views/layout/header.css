@@ -1,0 +1,67 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+    color: rgb(248, 113, 3);
+  }
+  
+  .header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav a {
+    color: rgb(248, 113, 3);
+    font-size: 16px;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+  
+  .nav a.active {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 2px solid white;
+  }
+  
+
+/* Navbar Profile Button */
+.profile-btn {
+    background-color: rgb(248, 113, 3);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .profile-btn:hover {
+    background-color: rgb(255, 137, 33);
+  }
+  
+  /* Modal Logout Button */
+  .logout-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .logout-btn:hover {
+    background-color: #bd2130;
+  }
+  
+  /* Cart Icon */
+.cart-icon {
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
