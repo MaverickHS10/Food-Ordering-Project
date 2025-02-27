@@ -1,0 +1,238 @@
+[{
+  "_id": {
+    "$oid": "67ade2bfc4ba57b9066b6cac"
+  },
+  "name": "Pizza",
+  "description": "Cheesy and delicious pizza topped with fresh ingredients",
+  "price": 351,
+  "category": "Main Course",
+  "image": "/uploads/1739449023565_pizza.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:17:03.575Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:17:03.575Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade2e9c4ba57b9066b6cb0"
+  },
+  "name": "Burger",
+  "description": "Crispy and stacked burger",
+  "price": 80,
+  "category": "Main Course",
+  "image": "/uploads/1739449065910_burger.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:17:45.916Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:17:45.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade337c4ba57b9066b6cb4"
+  },
+  "name": "Red Sauce Pasta",
+  "description": "Cheesy pasta with rich flavor of tomatoes.",
+  "price": 270,
+  "category": "Main Course",
+  "image": "/uploads/1739449143176_pasta.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:19:03.183Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:19:03.183Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade376c4ba57b9066b6cb8"
+  },
+  "name": "Mocktail",
+  "description": "Refreshing and fruity mocktail.",
+  "price": 99,
+  "category": "Drinks",
+  "image": "/uploads/1739449206789_mocktail.jpeg",
+  "createdAt": {
+    "$date": "2025-02-13T12:20:06.792Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:20:06.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade3afc4ba57b9066b6cbe"
+  },
+  "name": "Coke",
+  "description": "Your coke with extra strong punch",
+  "price": 55,
+  "category": "Drinks",
+  "image": "/uploads/1739449263016_coke.jpeg",
+  "createdAt": {
+    "$date": "2025-02-13T12:21:03.018Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:21:03.018Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade3d7c4ba57b9066b6cc2"
+  },
+  "name": "Lemon Juice",
+  "description": "Mood refreshing lemon juice.",
+  "price": 40,
+  "category": "Drinks",
+  "image": "/uploads/1739449303795_lemon.jpeg",
+  "createdAt": {
+    "$date": "2025-02-13T12:21:43.799Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:21:43.799Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade6e6c4ba57b9066b6cc6"
+  },
+  "name": "Aloo Chaat",
+  "description": "Tasty aloo chaat with the blend of masalas.",
+  "price": 60,
+  "category": "Snacks",
+  "image": "/uploads/1739450086697_aloo-chaat.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:34:46.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:34:46.702Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade722c4ba57b9066b6cc9"
+  },
+  "name": "Chana Chat",
+  "description": "Chana chat with awesome masala's.",
+  "price": 40,
+  "category": "Snacks",
+  "image": "/uploads/1739450146574_chickpea-chaat.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:35:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:35:46.582Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade793c4ba57b9066b6ccc"
+  },
+  "name": "Paneer Pakoda",
+  "description": "Tasty pakoda's with paneer at its core.",
+  "price": 60,
+  "category": "Snacks",
+  "image": "/uploads/1739450259093_paneer-pakora-1.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:37:39.097Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:37:39.097Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade7d4c4ba57b9066b6ccf"
+  },
+  "name": "Samosa",
+  "description": "Samosa's with filing of aloo.",
+  "price": 60,
+  "category": "Snacks",
+  "image": "/uploads/1739450324813_samosa.jpg",
+  "createdAt": {
+    "$date": "2025-02-13T12:38:44.818Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:38:44.818Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade808c4ba57b9066b6cd2"
+  },
+  "name": "Rasgulla",
+  "description": "Juicy Rasgullas.",
+  "price": 30,
+  "category": "Dessert",
+  "image": "/uploads/1739450376188_rasgulla.jpeg",
+  "createdAt": {
+    "$date": "2025-02-13T12:39:36.191Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:39:36.191Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ade84cc4ba57b9066b6cd5"
+  },
+  "name": "Vanilla Ice Cream",
+  "description": "Delicious vanilla Ice cream",
+  "price": 55,
+  "category": "Dessert",
+  "image": "/uploads/1739450444874_vanilla-icecreame.jpeg",
+  "createdAt": {
+    "$date": "2025-02-13T12:40:44.876Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-13T12:40:44.876Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b487a9ae41518ea3b3caff"
+  },
+  "name": "Chocolate Ice Cream",
+  "description": "Delicious ice cream with raw flavors of chocolate.",
+  "price": 65,
+  "category": "Dessert",
+  "image": "/uploads/1739884457044_chocolate-iceCreame.jpeg",
+  "createdAt": {
+    "$date": "2025-02-18T13:14:17.067Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T13:16:10.436Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67bdfdf3afd93c1869dc6751"
+  },
+  "name": "Gulab Jamun",
+  "description": "Delicious and juicy Gulab Jamuns.",
+  "price": 45,
+  "category": "Dessert",
+  "image": "/uploads/1740504563988_jamun.jpeg",
+  "createdAt": {
+    "$date": "2025-02-25T17:29:24.013Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T17:29:24.013Z"
+  },
+  "__v": 0
+}]
