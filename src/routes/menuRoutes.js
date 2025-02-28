@@ -5,9 +5,9 @@ const Menu = require("../models/menuModel");
 
 const router = express.Router();
 
-// Set up storage for images
+//We have created storage for image uploads
 const storage = multer.diskStorage({
-    destination: "./uploads/", // Folder to store images
+    destination: "./uploads/", 
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}_${file.originalname}`);
     }
@@ -15,7 +15,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Route to add a menu item
 router.post("/addMenuItem", upload.single("image"), async (req, res) => {
     try {
         const { name, description, price, category } = req.body;
@@ -39,7 +38,6 @@ router.post("/addMenuItem", upload.single("image"), async (req, res) => {
     }
 });
 
-// Route to get all menu items
 router.get("/menuItems", async (req, res) => {
     try {
         const menuItems = await Menu.find();
@@ -49,7 +47,6 @@ router.get("/menuItems", async (req, res) => {
     }
 });
 
-// Route to update a menu item
 router.put("/updateMenuItem/:id", upload.single("image"), async (req, res) => {
     try {
         const { name, description, price, category } = req.body;
@@ -71,7 +68,6 @@ router.put("/updateMenuItem/:id", upload.single("image"), async (req, res) => {
     }
 });
 
-// Route to delete a menu item
 router.delete("/deleteMenuItem/:id", async (req, res) => {
     try {
         const deletedItem = await Menu.findByIdAndDelete(req.params.id);

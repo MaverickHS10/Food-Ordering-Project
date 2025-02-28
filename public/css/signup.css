@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    margin-top: 48px; /* Offset for the fixed header height */
+    margin-top: 48px; 
   }
   
   .form-wrapper {

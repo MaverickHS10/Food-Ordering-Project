@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
   addresses: { type: [String], default: [] },  // Add addresses field
 });
 
-// Use `mongoose.models` to prevent overwriting the model
 const User = mongoose.models.User || mongoose.model("User", userSchema);
 
 module.exports = User;

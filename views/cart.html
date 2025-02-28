@@ -8,7 +8,6 @@
   <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="logo">FoodiePhile</div>
     <nav class="nav">
@@ -19,27 +18,21 @@
     </nav>
   </header>
 
-<!-- Profile Popup -->
 <div id="profilePopup" class="popup" style="display: none;">
   <div class="popup-content">
     <button id="closeProfilePopup" class="close-btn">&times;</button>
 
-    <!-- Profile Picture Placeholder -->
     <div class="profile-picture" style="height: 100px; width: 100px; background-color: #ccc; border-radius: 50%; margin: auto;"></div>
 
-    <!-- User Info -->
     <h3 id="popupUsername" class="popup-username"></h3>
     <p id="popupEmail" class="popup-email"></p>
 
-    <!-- Add Address -->
     <button id="addAddressBtn" class="btn">Add New Address</button>
     <input id="newAddressInput" type="text" placeholder="Enter address" style="display: none; margin-top: 10px; width: 90%; padding: 5px;" />
     <button id="saveAddressBtn" class="btn" style="display: none; margin-top: 5px;">Save Address</button>
 
-    <!-- Address List -->
     <ul id="addressList" class="address-list"></ul>
 
-    <!-- Logout Button (sticks to the bottom) -->
     <button id="popupLogoutBtn" class="btn logout-btn">Logout</button>
   </div>
 </div>
@@ -48,10 +41,8 @@
     <div class="main">
       <h1 style="text-align: center; color: #ff5722;">Cart</h1>
       <div id="cartContainer">
-        <!-- Empty cart message -->
         <p id="emptyCartMessage" style="display: none; text-align: center; font-size: 18px; color: #888;">Your cart is empty.</p>
 
-        <!-- Headings for cart attributes -->
         <div id="cartHeadings" style="display: none; text-align: left; font-weight: bold; padding: 10px 0; border-bottom: 2px solid #ccc;">
           <span style="width: 40%; display: inline-block;">Item Name</span>
           <span style="width: 32%; display: inline-block;">Quantity</span>
@@ -59,7 +50,6 @@
           <span style="width: 15%; display: inline-block;"></span>
         </div>
 
-        <!-- List of cart items -->
         <ul id="cartList"></ul>
 
         <div id="cartSummary" style="display: none;">
@@ -69,7 +59,6 @@
           <div id="addressSection">
             <select id="addressDropdown" style="margin-top: 10px;">
               <option value="" disabled selected>Select Delivery Address</option>
-              <!-- Add dynamically populated addresses here -->
             </select>
           </div>         
           <div class="cart-buttons">
@@ -82,21 +71,17 @@
     </div>
   </main>
 
-  <!-- Modal for Order Summary -->
   <div id="orderSummaryModal" style="display: none;">
     <div class="modal-content">
       <button id="closeOrderSummary" class="close-btn">&times;</button>
       <h2 style="text-align: center;">Order Summary</h2>
       
-      <!-- Headings for order summary attributes -->
       <div id="orderSummaryHeadings" style="font-weight: bold; border-bottom: 2px solid #ccc; display: flex; justify-content: space-between;">
         <span style="flex: 1; text-align: left;">Item Name</span>
         <span style="flex: 1; text-align: center;">Quantity</span>
         <span style="flex: 1; text-align: right;">Price</span>
       </div>
       
-
-      <!-- List of order summary items -->
       <ul id="orderSummaryList"></ul>
 
       <p style="text-align: center;"><strong>Total Price: ₹<span id="orderSummaryTotalPrice">0</span></strong></p>
@@ -104,7 +89,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>FoodiePhile Group Of Cloud Kitchens</p>

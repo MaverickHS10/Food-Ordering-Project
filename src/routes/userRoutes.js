@@ -1,36 +1,34 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/userModel"); // Adjusted for src/models folder
+const User = require("../models/userModel"); 
 
-// Add Address
 router.post("/addAddress", async (req, res) => {
   const { email, address } = req.body;
   try {
-    const user = await User.findOne({ email }); // Fetch user by ID
+    const user = await User.findOne({ email }); 
     if (user) {
-      user.addresses.push(address); // Add new address to addresses array
-      await user.save(); // Save updated user
-      res.json({ success: true, user }); // Respond with updated user
+      user.addresses.push(address); 
+      await user.save(); 
+      res.json({ success: true, user }); 
     } else {
-      res.json({ success: false, message: "User not found." }); // Handle case where user is not found
+      res.json({ success: false, message: "User not found." }); 
     }
   } catch (error) {
-    res.status(500).json({ success: false, error }); // Handle errors
+    res.status(500).json({ success: false, error }); 
   }
 });
 
-// Remove Address
 router.delete("/removeAddress", async (req, res) => {
   const { email, address } = req.body;
 
   try {
-    const user = await User.findOne({ email }); // Find user by email
+    const user = await User.findOne({ email }); 
     if (user) {
-      const addressIndex = user.addresses.indexOf(address); // Find index of the address
+      const addressIndex = user.addresses.indexOf(address); 
       if (addressIndex > -1) {
-        user.addresses.splice(addressIndex, 1); // Remove the address
-        await user.save(); // Save updated user
-        res.json({ success: true, user }); // Respond with updated user
+        user.addresses.splice(addressIndex, 1); 
+        await user.save();
+        res.json({ success: true, user }); 
       } else {
         res.json({ success: false, message: "Address not found." });
       }
@@ -44,4 +42,4 @@ router.delete("/removeAddress", async (req, res) => {
 });
 
 
-module.exports = router; // Export the router
+module.exports = router; 

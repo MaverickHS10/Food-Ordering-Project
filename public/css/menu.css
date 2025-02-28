@@ -1,4 +1,3 @@
-/* Ensure full-page layout */
 html, body {
   height: 100%;
   margin: 0;
@@ -39,10 +38,10 @@ html, body {
   }
   
 .nav {
-    display: none; /* Hide initially */
-    visibility: hidden; /* Prevent flickering */
+    display: none; 
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+    transition: opacity 0.3s ease-in-out;
 }
   .nav a {
     color: orange;

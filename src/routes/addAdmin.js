@@ -1,4 +1,3 @@
-// CreateAdmin.js
 const mongoose = require("mongoose");
 const Admin = require("../models/adminModel");
 
@@ -12,8 +11,8 @@ mongoose
 
 async function createAdmin() {
   const admin = new Admin({
-    email: "admin@gmail.com", // Replace with your admin email
-    password: "Ad@12345", // Replace with your admin password
+    email: "admin@gmail.com", 
+    password: "Ad@12345", 
   });
 
   try {

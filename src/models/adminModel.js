@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
-// Define the Admin schema
 const adminSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -15,11 +14,10 @@ const adminSchema = new mongoose.Schema({
   },
 });
 
-// Hash the password before saving the admin
 adminSchema.pre("save", async function (next) {
   try {
     if (!this.isModified("password")) {
-      return next(); // Skip if password is not modified
+      return next(); 
     }
     const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
@@ -29,7 +27,6 @@ adminSchema.pre("save", async function (next) {
   }
 });
 
-// Add a method to validate admin credentials
 adminSchema.methods.isValidPassword = async function (password) {
   try {
     return await bcrypt.compare(password, this.password);
@@ -38,7 +35,6 @@ adminSchema.methods.isValidPassword = async function (password) {
   }
 };
 
-// Create the Admin model
 const Admin = mongoose.model.Admin || mongoose.model("Admin", adminSchema);
 
 module.exports = Admin;

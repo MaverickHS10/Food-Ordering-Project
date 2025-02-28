@@ -8,7 +8,6 @@
   <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="logo">FoodiePhile</div>
     <nav class="nav">
@@ -18,16 +17,13 @@
     </nav>
   </header>
 
-  <!-- Login/Signup Form -->
   <main class="auth-container">
     <div class="form-wrapper">
-      <!-- Tabs -->
       <div class="tabs">
         <button id="loginTab" class="tab active">Login</button>
         <button id="signupTab" class="tab">Sign Up</button>
       </div>
 
-      <!--User Login Form -->
       <form id="loginForm" class="auth-form active">
         <h2>User Login</h2>
         <label for="loginEmail">Email</label>
@@ -41,20 +37,18 @@
         </div>
       </form>
 
-            <!--Admin Login Form -->
-            <form id="adminLoginForm" class="auth-form">
-              <h2>Admin Login</h2>
-              <label for="adminEmail">Admin Email</label>
-              <input type="email" id="adminEmail" placeholder="Enter admin email" required>
-              <label for="adminPassword">Password</label>
-              <input type="password" id="adminPassword" placeholder="Enter admin password" required>
-              <button type="submit">Login as Admin</button>
-              <div id="linkContainer">
-                <a href="#" id="loginUser">Back to User Login</a>
-              </div>
-            </form>
+      <form id="adminLoginForm" class="auth-form">
+        <h2>Admin Login</h2>
+        <label for="adminEmail">Admin Email</label>
+        <input type="email" id="adminEmail" placeholder="Enter admin email" required>
+        <label for="adminPassword">Password</label>
+        <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+        <button type="submit">Login as Admin</button>
+        <div id="linkContainer">
+        <a href="#" id="loginUser">Back to User Login</a>
+        </div>
+      </form>
 
-      <!--User Signup Form -->
       <form id="signupForm" class="auth-form">
         <h2>Sign Up</h2>
         <label for="signupUsername">Username</label>
@@ -72,9 +66,7 @@
       </form>
     </div>
   </main>
-  
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>FoodiePhile Group Of Cloud Kitchens</p>

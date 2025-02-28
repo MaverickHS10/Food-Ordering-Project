@@ -1,17 +1,14 @@
-// routes/orderRoutes.js
 const express = require("express");
 const Order = require("../models/orderModel");
 
 const router = express.Router();
 
-// Helper function to generate sequential order IDs
 async function generateOrderId() {
   const lastOrder = await Order.findOne().sort({ createdAt: -1 });
   const lastNumber = lastOrder ? parseInt(lastOrder.orderId, 10) : 0;
   return String(lastNumber + 1).padStart(8, "0");
 }
 
-// POST /api/orders/newOrder - Place a new order
 router.post("/newOrder", async (req, res) => {
   const { userEmail, deliveryAddress, orderItems, totalPrice } = req.body;
 
@@ -38,7 +35,6 @@ router.post("/newOrder", async (req, res) => {
   }
 });
 
-// GET /api/orders/getOrders - Get all orders (for admin dashboard)
 router.get("/getOrders", async (req, res) => {
   try {
     const orders = await Order.find().sort({ createdAt: -1 });
@@ -49,10 +45,6 @@ router.get("/getOrders", async (req, res) => {
   }
 });
 
-/* 
-  PATCH /api/orders/markCompleted - Mark an order as completed 
-  Expected body: { orderId: "00000001" }
-*/
 router.patch("/markCompleted", async (req, res) => {
   const { orderId } = req.body;
 
